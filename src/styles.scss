@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "../node_modules/swiper/swiper-bundle.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300i,400,700&display=swap');
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+$black: #000;
+$white: #fdfdfd;
+$grey: #333;
+$light_grey: #a6a6a6;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+  
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+      &.no-scroll{
+          overflow: hidden;
+      }
+  }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      }
+  
+      .img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+      }
+  
+      .btn {
+          font-size: 16px;
+          color: $black;
+          text-transform: uppercase;
+          font-weight: 400;
+          text-decoration: none;
+          padding: 10px 30px;
+          border-radius: 20px;
+          transition: box-shadow .2s linear, background-color .2s linear;
+  
+          &:hover {
+              border: 1px solid $grey;
+              box-shadow: 2px 2px 10px rgba($color: $black, $alpha: 0.3);
+          }
+  
+  
+          &.HIRE {
+              background-color: $black;
+              color: $white;
+  
+              &:hover {
+                  border: 1px solid $grey;
+                  background-color: $white;
+                  color: $black;
+                  }
+          }
+      }
+  
+      .text-center {
+          text-align: center;
+          margin-bottom: 50px;
+      }

@@ -1,0 +1,27 @@
+<div class="mouse-parallax">
+    
+    <div class="mouse-parallax__background"></div>
+    <div class="mouse-parallax__content">
+
+       <div class="mouse-parallax__avatar">
+            <img [src]=avatar width="200px" alt="avatar"></div>
+        <div class="mouse-parallax__name">{{name}}</div>
+        <div class="mouse-parallax__description">{{description}}</div>
+        <div class="mouse-parallax__social">
+            <a class="mouse-parallax__social-link" [href]=linkdin_url>
+                <img [src]=linkdin_icon alt="linkdin" width="25px">
+            </a >
+            <a class="mouse-parallax__social-link" [href]=instagram_url>
+                <img [src]=instagram_icon alt="instagram" width="26px">
+            </a>
+            <a class="mouse-parallax__social-link" [href]=facebook_url>
+                <img [src]=facebook_icon alt="facebook" width="25px">
+            </a>
+        </div>
+        <div>
+            <a class="mouse-parallax__nav" [href]=nav_work (click)=openWork()>WORK</a>
+            <a class="mouse-parallax__nav" [href]=nav_about_me (click)=openAbout()>ABOUT ME</a>
+            <a class="mouse-parallax__nav" [href]=nav_blog (click)=openBlog()>BLOG</a>
+        </div>
+    </div>
+  </div>
