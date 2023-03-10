@@ -11,6 +11,7 @@ import { WorksComponent } from './works/works.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { ModalWorkComponent } from './modal-work/modal-work.component';
+import { ModalBlogComponent } from './modal-blog/modal-blog.component';
 import { ModalContactComponent } from './modal-contact/modal-contact.component';
 import { ModalResumeComponent } from './modal-resume/modal-resume.component';
 import { ArticlesComponent } from './articles/articles.component'
@@ -29,7 +30,8 @@ import { ArticlesComponent } from './articles/articles.component'
     ModalWorkComponent,
     ModalContactComponent,
     ModalResumeComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    ModalBlogComponent
   ],
   imports: [
     BrowserModule,

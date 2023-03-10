@@ -18,7 +18,7 @@ export class FonComponent {
         const y = e.pageY / document.documentElement.clientHeight
 
         let parallax = document.querySelector('.mouse-parallax__background') as HTMLElement
-        parallax.setAttribute('style', 'display: translate(-' + x * 50 + 'px, -' + y * 50 + 'px)')
+        parallax.setAttribute('style', 'transform: translate(-' + x * 50 + 'px, -' + y * 50 + 'px)')
     }
 }
 

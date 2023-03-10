@@ -6,7 +6,7 @@ import {Article} from '../app.component'
   templateUrl: './modal-blog.component.html',
   styleUrls: ['./modal-blog.component.scss']
 })
-export class ModalWorkComponent {
+export class ModalBlogComponent {
 
   @Input() blog : Article
 
