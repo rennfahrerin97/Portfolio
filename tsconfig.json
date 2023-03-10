@@ -7,8 +7,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
+    "noImplicitAny": false,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -16,11 +17,13 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "ES6",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "module": "ES6",
     "useDefineForClassFields": false,
+    "strictPropertyInitialization": false,
     "lib": [
-      "ES2022",
+      "ES6",
       "dom"
     ]
   },
@@ -28,7 +31,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
-    "strictPropertyInitialization": true
+    "strictTemplates": true
   }
 }

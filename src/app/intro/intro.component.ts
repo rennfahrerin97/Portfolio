@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import User from '../app.component';
 
 @Component({
   selector: 'app-intro',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent {
-
+  @Input() user = new User ();
 }

@@ -4,22 +4,22 @@
 
             <div class="user">
                 <div class ="user__avatar">
-                    <img src="../assets/DSC_0612 (2).jpg" alt="avatar">
+                    <img [src]=user.avatar alt="avatar" width="40px">
                 </div>
                 <div class="user__content">
                     <div class="user__name">
-                        Dmytro<br>Hobatiuk
+                        {{user.first_name}}<br>{{user.last_name}}
                     </div>
-                    <div class="user__prof">Storyteller</div>
+                    <div class="user__prof">{{user.profession_1}}</div>
                 </div>
             </div>
 
             <nav class="nav">
-                <a class="nav__link" href="#">WORK</a>
-                <a class="nav__link" href="#">ABOUT ME</a>
-                <a class="nav__link" href="#">BLOG</a>
-                <a class="nav__link" href="#">CONTACT</a>
-                <a class="nav__link HIRE" href="#">HIRE ME</a>
+                <a class="nav__link" [href]=user.nav_work>WORK</a>
+                <a class="nav__link" [href]=user.nav_about_me>ABOUT ME</a>
+                <a class="nav__link" [href]=user.nav_blog>BLOG</a>
+                <a class="nav__link" [href]=user.nav_contact>CONTACT</a>
+                <a class="nav__link HIRE" [href]=user.nav_hire_me>HIRE ME</a>
             </nav>
         </div>
     </div>

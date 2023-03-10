@@ -4,24 +4,24 @@
     <div class="mouse-parallax__content">
 
        <div class="mouse-parallax__avatar">
-            <img [src]=avatar width="200px" alt="avatar"></div>
-        <div class="mouse-parallax__name">{{name}}</div>
-        <div class="mouse-parallax__description">{{description}}</div>
+            <img [src]=user.avatar width="200px" alt="avatar"></div>
+        <div class="mouse-parallax__name">{{user.first_name + " " + user.last_name}}</div>
+        <div class="mouse-parallax__description">{{user.description}}</div>
         <div class="mouse-parallax__social">
-            <a class="mouse-parallax__social-link" [href]=linkdin_url>
-                <img [src]=linkdin_icon alt="linkdin" width="25px">
+            <a class="mouse-parallax__social-link" [href]=user.linkdin_url>
+                <img [src]=user.linkdin_icon_black alt="linkdin" width="25px">
             </a >
-            <a class="mouse-parallax__social-link" [href]=instagram_url>
-                <img [src]=instagram_icon alt="instagram" width="26px">
+            <a class="mouse-parallax__social-link" [href]=user.instagram_url>
+                <img [src]=user.instagram_icon_black alt="instagram" width="26px">
             </a>
-            <a class="mouse-parallax__social-link" [href]=facebook_url>
-                <img [src]=facebook_icon alt="facebook" width="25px">
+            <a class="mouse-parallax__social-link" [href]=user.facebook_url>
+                <img [src]=user.facebook_icon_black alt="facebook" width="25px">
             </a>
         </div>
         <div>
-            <a class="mouse-parallax__nav" [href]=nav_work (click)=openWork()>WORK</a>
-            <a class="mouse-parallax__nav" [href]=nav_about_me (click)=openAbout()>ABOUT ME</a>
-            <a class="mouse-parallax__nav" [href]=nav_blog (click)=openBlog()>BLOG</a>
+            <a class="mouse-parallax__nav" [href]=user.nav_work>WORK</a>
+            <a class="mouse-parallax__nav" [href]=user.nav_about_me>ABOUT ME</a>
+            <a class="mouse-parallax__nav" [href]=user.nav_blog>BLOG</a>
         </div>
     </div>
   </div>

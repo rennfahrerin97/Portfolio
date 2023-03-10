@@ -1,1 +1,23 @@
-<p>modal-blog works!</p>
+<div class="modal__dialog">
+
+    <button class="modal__close" type="button">
+        <img src="../assets/close.png" alt="close" width="20px" (click)="closeArticle()">
+    </button>
+
+    <div class="modal-work">
+        <div class="modal-work__preview">
+            <div class="modal-work__header">
+                <h3 class="modal-work__title">{{blog.title}}</h3>
+                <div class="modal-work__category">{{blog.category}}</div>
+            </div>
+            <div class="modal-work__photo">
+                <img [src]="blog.image" alt="work">
+            </div>                        
+        </div>
+        <div class="modal-work__content">
+            <div class="modal-work__text">{{blog.text}}
+            </div>
+        </div>
+    </div>
+</div>
+

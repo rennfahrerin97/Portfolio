@@ -2,27 +2,26 @@
     <div class="container">
         <div class="intro__inner">
             <div class="intro__content">
-                <h2 class="intro__subtitle">Hello i`m</h2>
-                <h1 class="intro__title">Dmytro Hobatiuk</h1>
-                <div class="intro__text">Storyteller &amp; Project manager</div>
+                <h2 class="intro__subtitle">{{user.intro_subtitle}}</h2>
+                <h1 class="intro__title">{{user.first_name + " " + user.last_name}}</h1>
+                <div class="intro__text">{{user.profession_1}} &amp; {{user.profession_2}}</div>
 
                 <div class="social">
-                    <a class="social__link" href="#">
-                        <img src="assets/linkdin_black.png" alt="linkdin" width="30px">
+                    <a class="social__link" [href]=user.linkdin_url>
+                        <img [src]=user.linkdin_icon_black alt="linkdin" width="30px">
                     </a >
-                    <a class="social__link" href="#">
-                        <img src="assets/instagram_black.png" alt="instagram" width="32px">
+                    <a class="social__link" [href]=user.instagram_url>
+                        <img [src]=user.instagram_icon_black alt="instagram" width="30px">
                     </a>
-                    <a class="social__link" href="#">
-                        <img src="assets/facebook_black.png" alt="facebook" width="30px">
+                    <a class="social__link" [href]=user.facebook_url>
+                        <img [src]=user.facebook_icon_black alt="facebook" width="30px">
                     </a>
                 </div>
 
-                <a class="intro__link HIRE" href="#">HIRE ME</a>
-                <a class="btn" href="#">SEE MY RESUME</a>
-
+                <a class="intro__link HIRE" [href]=user.nav_hire_me>HIRE ME</a>
+                <a class="btn" [href]=user.nav_resume>SEE MY RESUME</a>
             </div> 
-            <img class="intro__photo" src="assets/intro.jpg" alt="my_photo">
+            <img class="intro__photo" [src]=user.intro_photo alt="my_photo">
         </div>
     </div>
 </section>

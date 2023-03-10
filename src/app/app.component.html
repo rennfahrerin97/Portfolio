@@ -3,7 +3,41 @@
   <app-header></app-header>
   <app-intro></app-intro>
   <app-works></app-works>
+
+  <div class="container">
+    <div class="portfolio">
+      <app-articles (sendId)="changeArticleId($event)"
+        *ngFor="let iterArticle of articles"
+        [article]="iterArticle">
+      </app-articles>
+    </div>
+  </div>
+
+  <!--div class="text-center">
+    <a class="btn" href="#">Load more work</a>
+  </div-->
+
   <app-about></app-about>
-  <app-blog></app-blog>
+
+  <div class="blog">
+    <div class="container">
+      <div class="blog__header">
+        <h3 class="blog__title">READ ME</h3>
+        <div class="blog__text">Sometimes I write something smart</div>
+      </div>
+
+      <div class="portfolio">
+        <app-blog class="articles__col" (sendBlogId)="changeBlogId($event)"
+          *ngFor="let iterBlog of blogs"
+          [blog]="iterBlog">
+        </app-blog>
+      </div>
+    </div>
+  </div>
+
   <app-footer></app-footer>
+
+  <app-modal-work class="modal" [modal]="articles[article_id]"></app-modal-work>
+  <app-modal-blog class="modal-blog" [blog]="blogs[blog_id]"></app-modal-blog>
+
 </div>
