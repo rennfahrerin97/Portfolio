@@ -1,18 +1,14 @@
-    <div class="articles__item">
-        <div class="articles__header">
-            <time class="articles__date">{{blog.date[0]}}<br>{{blog.date[1]}}</time>
-            <a (click)="openArticle(true)">
-                <img class="articles__photo" [src]="blog.image" alt="photo" width="370px" height="300px">
-            </a>                                
-        </div>
-        <div class="articles__content">
-            <a (click)="openArticle(true)">
-                <h4 class="articles__title">{{blog.title}}</h4>
-            </a> 
-            <div class="articles__category">{{blog.category}}</div>
-            <div class="articles__text">{{blog.text}}</div>
-        </div>
-        <div class="text-center">
-            <a class="btn" (click)="openArticle(true)">Read more</a>
-        </div>
+<div class="blog__item" (click)="openBlog(true)">
+    <div class="blog__header">
+        <time class="blog__date">{{blog.date[0]}}<br>{{blog.date[1]}}</time>
+        <img class="blog__photo" [src]="blog.image" alt="photo" width="370px" height="300px">                          
     </div>
+    <div class="blog__content">
+        <h4 class="blog__title">{{blog.title}}</h4>
+        <div class="blog__category">{{blog.category}}</div>
+        <div class="blog__text">{{blog.text}}</div>
+    </div>
+    <div class="text-center">
+        <a class="btn">Read more</a>
+    </div>
+</div>

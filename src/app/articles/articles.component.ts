@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import User from '../app.component';
 import {Article} from '../app.component';
 
@@ -15,13 +15,15 @@ export class ArticlesComponent {
   @Input() articles : Article
   @Input() article : Article
 
-  @Output() sendId = new EventEmitter()
+  @Output() sendArticleId = new EventEmitter()
 
   openArticle(openModal) {
     if (openModal === true) {
-      let modal_article = document.querySelector('.modal') as HTMLElement
-      modal_article.setAttribute('style', 'display : flex')
+      let modal_window = document.getElementById('modal-work')?.classList
+      let active_class = 'opened'
+      modal_window?.add(active_class)
     }
-    this.sendId.emit(this.article.id);
+    openModal = false;
+    this.sendArticleId.emit(this.article.id);
     }
 }

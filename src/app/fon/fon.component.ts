@@ -1,5 +1,5 @@
 import {Component, Input, HostListener} from '@angular/core';
-import User from '../app.component';
+import User from '../app.component'; 
 
 @Component({
     selector: 'app-fon',
@@ -20,5 +20,17 @@ export class FonComponent {
         let parallax = document.querySelector('.mouse-parallax__background') as HTMLElement
         parallax.setAttribute('style', 'transform: translate(-' + x * 50 + 'px, -' + y * 50 + 'px)')
     }
+
+    toWork() {
+        document.getElementById('work')?.scrollIntoView({behavior:"smooth"});
+      }
+  
+      toAbout() {
+        document.getElementById('about_me')?.scrollIntoView({behavior:"smooth"});
+      }
+  
+      toBlog() {
+        document.getElementById('blog')?.scrollIntoView({behavior:"smooth"});
+      }
 }
 

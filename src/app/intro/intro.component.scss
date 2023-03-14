@@ -15,10 +15,11 @@ $light_grey: #a6a6a6;
 
 .intro__content {
     width: 50%;
-    justify-content: space-between;
     align-items: center;
     padding-top: 130px;
     margin-bottom: 120px;
+    margin-right: 20px;
+
 
     .intro__subtitle {
         font-size: 32px;
@@ -42,15 +43,17 @@ $light_grey: #a6a6a6;
         padding-top: 25px;
         padding-bottom: 42px;
         display: flex;
-    }
-    .social__link {
-        margin-right: 5px;
-        text-decoration: none;
-        transition: transform .2s linear;
 
-        &:hover {
-            transform: translateY(-5px);
-        }
+        .social__link {
+            margin-right: 5px;
+            text-decoration: none;
+            transition: transform .2s linear;
+    
+            &:hover {
+                transform: translateY(-5px);
+            }
+    }
+    
     }
 
     .intro__link {
@@ -86,4 +89,9 @@ $light_grey: #a6a6a6;
     position: absolute;
     bottom: 0;
     right: 0;
+    margin-left: 20px;  
+    
+    &.img {
+        display: block;
+    }
 }

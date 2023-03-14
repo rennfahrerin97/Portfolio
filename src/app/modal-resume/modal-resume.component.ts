@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-modal-resume',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ModalResumeComponent {
 
+  closeResume() {
+    let modal_window = document.getElementById('modal-resume')?.classList
+    let active_class = 'opened'
+    modal_window?.remove(active_class)
+  }
 }

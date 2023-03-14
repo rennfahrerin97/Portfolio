@@ -13,10 +13,13 @@ $light_grey: #a6a6a6;
 
         .about__photo {
             width: 50%;
+            display: block;
+            padding: 10px;
         }
 
         .about__content {
             width: 50%;
+            padding: 10px;
 
             .about__title {
                 font-size: 45px;

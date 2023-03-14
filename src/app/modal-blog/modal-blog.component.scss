@@ -3,82 +3,84 @@ $white: #fdfdfd;
 $grey: #333;
 $light_grey: #a6a6a6;
 
-.modal__dialog {
+.modal-blog-window {
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px;
-    background-color: $white;
-    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    padding: 15px;
+    overflow: auto;
 
-    &--sm {
-        max-width: 900px;
-    }
+    .modal-blog-window__dialog {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px;
+        background-color: $white;
+        position: relative;
 
-    .modal__close {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        background: none;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        transition:  box-shadow .2s linear;
+        .modal-blog-window__close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: none;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            transition:  box-shadow .2s linear;
 
-        &:hover {
-            box-shadow: 0 0 25px rgba($color: $black, $alpha: .25);
+            &:hover {
+                box-shadow: 0 0 25px rgba($color: $black, $alpha: .25);
+            }
         }
-    }
 
-    .modal-work {
-        display: flex;
+        .modal-blog {
+            display: flex;
+            margin: 20px;
 
-        .modal-work__preview {
-            position: relative;
-            width: 50%;
-            margin-right: 50px;
+            .modal-blog__preview {
+                position: relative;
+                width: 50%;
+                margin-right: 50px;
 
-            .modal-work__header {
-                padding: 10px;
-                //line-height: 30px;
+                .modal-blog__header {
+                    padding: 10px;
 
-                .modal-work__title {
-                    font-size: 35px;
-                    color: $black;
-                    margin-bottom: 20px;
+                    .modal-blog__title {
+                        font-size: 35px;
+                        color: $black;
+                        margin-bottom: 20px;
+                    }
+
+                    .modal-blog__category {
+                        font-size: 24px;
+                        color: $light_grey;
+                        margin-bottom: 10px;
+                    }
                 }
 
-                .modal-work__category {
-                    font-size: 24px;
-                    color: $light_grey;
-                    margin-bottom: 10px;
+                .modal-blog__photo {
+                    position: absolute;                  
+        
+                    img {
+                        display: block;
+                        max-width: 100%;
+                    }
+                }
+            }
+        
+
+            .modal-blog__content {
+                width: 50%;
+
+                .modal-blog__text {
+                    color: $grey;
+                    font-size: 14px;
+                    min-height: 650px;
                 }
             }
         }
     }
-
-        .modal-work__content {
-            width: 50%;
-            .modal-work__text {
-                color: $grey;
-                font-size: 14px;
-            }
-
-            .modal-work__title {
-                font-size: 45px;
-                color: $black;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    .modal-work__photo {
-        position: absolute;                  
-
-        img {
-            //max-width: 600px;
-            display: block;
-            max-width: 100%;
-        }
-    }
-    
+}

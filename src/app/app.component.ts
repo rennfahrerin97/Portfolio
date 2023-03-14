@@ -1,5 +1,5 @@
 import { FactoryTarget } from '@angular/compiler';
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 class User {
     first_name: string = 'Dmytro';
@@ -7,6 +7,8 @@ class User {
     profession_1: string = 'Storyteller';
     profession_2: string = 'Project manager';
     description: string = 'Personal website of the storyteller';
+    phone: string = '+38 (063) 931-80-04';
+    email: string = 'dmytrohobatiuk@ukr.net';
     facebook_url: string = 'https://www.facebook.com/profile.php?id=100069989741012';
     instagram_url: string = 'https://www.instagram.com/tyt.ua/';
     linkdin_url: string = '#';
@@ -16,10 +18,12 @@ class User {
     facebook_icon_grey: string = '../assets/facebook_grey.png';
     instagram_icon_grey: string = '../assets/instagram_grey.png';
     linkdin_icon_grey: string = '../assets/linkdin_grey.png';
-    nav_blog : string = '#';
-    nav_work : string = '#';
-    nav_about_me : string = '#';
-    nav_contact : string = '#';
+    call_me_icon: string = '../assets/call_me.jpg';
+    email_icon: string = '../assets/email.png';
+    nav_blog : string = '/blog';
+    nav_work : string = '/work';
+    nav_about_me : string = '/about_me';
+    nav_contact : string = '/contact';
     nav_resume : string = '#';
     nav_hire_me : string = '#';
     avatar : string = '../assets/avatar.jpg';
@@ -28,7 +32,7 @@ class User {
     work_description : string = 'It is important for me the text is simple, useful, and it cares for the client.';
 }
 export default User
-
+ 
 export interface Article {
   id : number
   date : object
@@ -45,11 +49,11 @@ export interface Article {
 })
 
 export class AppComponent {
-  article_id : number = 0
-  blog_id : number = 0
-  user : any = User  
-  openModal : boolean = false
-
+  article : Article
+  blog : Article
+  user : any = User 
+  title : string = 'portfolio' 
+  
   articles : Article [] = [
     {id : 0,
       date : [],
@@ -139,12 +143,17 @@ export class AppComponent {
     },
   ]
 
-  changeArticleId(id) {
-    this.article_id = id
+  changeArticle(id) {
+    this.article = this.articles[id]
   }
 
   changeBlogId(idBlog) {
-    this.blog_id = idBlog
+    this.blog = this.blogs[idBlog]
+    console.log(this.blog)
+  }
+
+  ngOnInit() {
+    
   }
   
 }

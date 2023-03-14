@@ -1,4 +1,4 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {Article} from '../app.component'
 
 @Component({
@@ -7,11 +7,11 @@ import {Article} from '../app.component'
   styleUrls: ['./modal-blog.component.scss']
 })
 export class ModalBlogComponent {
-
   @Input() blog : Article
 
-  closeArticle() {
-    let modal_article = document.querySelector('.modal') as HTMLElement
-    modal_article.setAttribute('style', 'display : none')
+  closeBlog() {
+    let modal_window = document.getElementById('modal-blog')?.classList
+    let active_class = 'opened'
+    modal_window?.remove(active_class)
   }
 }

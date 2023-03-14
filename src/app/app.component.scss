@@ -3,17 +3,16 @@ $white: #fdfdfd;
 $grey: #333;
 $light_grey: #a6a6a6;
 
-body{
+body {
   
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
     }
 
-      &.no-scroll{
-          overflow: hidden;
-        }
+    &.no-scroll{
+      overflow: hidden;
     }
-
+  }
   .container {
     width: 100%;
     max-width: 1200px;
@@ -25,52 +24,68 @@ body{
       margin-bottom: 50px;
   }
 
-  .portfolio {
+  %grid {
     display: flex;
     flex-wrap: wrap; //move items to next row
     margin: 30px 0;
   }
 
-  .articles__col {
-    width: 33.33333%;
-    padding: 0 15px;
-    margin: 0 -15px;
-}
+  .portfolio { //locked background
+    @extend %grid;
+  }
 
-  .modal { //locked background
+  .blog { //locked background
+    @extend %grid;
+
+    .blog__col {
+      flex-basis: 33.3333%;
+      padding: 15px;
+      margin: 0 -15px;
+    }
+  }
+
+
+  %modal { //locked background
     display: none;// flex;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    background: rgba($color: $black, $alpha: .8);
     position: fixed;
     padding: 15px;
     overflow: auto;
+
+    &.opened {
+      display: flex;
+      background: rgba($color: $black, $alpha: .8);    
+    }
+  }
+
+  .article-window { //locked background
+    @extend %modal;
   }
   
-  .modal-blog { //locked background
-    display: none;// flex;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: rgba($color: $black, $alpha: .8);
-    position: fixed;
-    padding: 15px;
-    overflow: auto;
+  .blog-window { //locked background
+    @extend %modal;
   }
 
-  .blog {
+  .contact-window { //locked background
+    @extend %modal;
+  }
+  
+  .resume-window { //locked background
+    @extend %modal;
+  }
+
+  .blogs {
     margin-top: 100px;
 
-    .blog__header {
+    .blogs__header {
         text-align: center;
         margin-bottom: 50px;
 
-        .blog__title {
+        .blogs__title {
             font-size: 45px;
             color: $black;
             text-transform: uppercase;
@@ -78,9 +93,10 @@ body{
             margin-bottom: 10px;
         }
         
-        .blog__text {
+        .blogs__text {
             font-size: 20px;
             color: $light_grey;
         }
     }
 }
+

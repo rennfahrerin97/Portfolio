@@ -5,7 +5,7 @@ $light_grey: #a6a6a6;
 
 .header {
     padding: 15px;
-
+   
     .header__inner {
         display: flex;
         justify-content: space-between;
@@ -73,3 +73,14 @@ $light_grey: #a6a6a6;
             }
         }
     }
+
+    @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          top: -50px;
+        }
+        to {
+          opacity: 1;
+          top: 0;
+        }  
+      }

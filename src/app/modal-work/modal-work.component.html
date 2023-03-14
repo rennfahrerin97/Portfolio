@@ -1,23 +1,25 @@
+<div class="modal">
     <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
-            <img src="../assets/close.png" alt="close" width="20px" (click)="closeArticle()">
+        <button class="modal__close" type="button" (click)="closeArticle()">
+            <img src="../assets/close.png" alt="close" width="20px">
         </button>
 
         <div class="modal-work">
             <div class="modal-work__preview">
                 <div class="modal-work__header">
-                    <h3 class="modal-work__title">{{modal.title}}</h3>
-                    <div class="modal-work__category">{{modal.category}}</div>
+                    <h3 class="modal-work__title">{{work.title}}</h3>
+                    <div class="modal-work__category">{{work.category}}</div>
                 </div>
                 <div class="modal-work__photo">
-                    <img [src]="modal.image" alt="work">
+                    <img [src]="work.image" alt="work">
                 </div>                        
             </div>
             <div class="modal-work__content">
-                <div class="modal-work__text">{{modal.text}}
-                </div>
+                <div class="modal-work__text">{{work.text}}</div>
             </div>
         </div>
+
     </div>
+</div>
 

@@ -1,4 +1,4 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import {Article} from '../app.component'
 
 @Component({
@@ -8,11 +8,11 @@ import {Article} from '../app.component'
 })
 export class ModalWorkComponent {
 
-  @Input() modal : Article
+  @Input() work : Article
 
   closeArticle() {
-    let modal_article = document.querySelector('.modal') as HTMLElement
-    modal_article.setAttribute('style', 'display : none')
+    let modal_window = document.getElementById('modal-work')?.classList
+    let active_class = 'opened'
+    modal_window?.remove(active_class)
   }
-
 }

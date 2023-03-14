@@ -19,9 +19,9 @@
             </a>
         </div>
         <div>
-            <a class="mouse-parallax__nav" [href]=user.nav_work>WORK</a>
-            <a class="mouse-parallax__nav" [href]=user.nav_about_me>ABOUT ME</a>
-            <a class="mouse-parallax__nav" [href]=user.nav_blog>BLOG</a>
+            <a (click)="toWork()" class="mouse-parallax__nav" [routerLink]=user.nav_work>WORK</a>
+            <a (click)="toAbout()" class="mouse-parallax__nav" [routerLink]=user.nav_about_me>ABOUT ME</a>
+            <a (click)="toBlog()" class="mouse-parallax__nav" [routerLink]=user.nav_blog>BLOG</a>
         </div>
     </div>
   </div>

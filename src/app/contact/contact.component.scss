@@ -2,7 +2,7 @@ $black: #000;
 $white: #fdfdfd;
 $grey: #333;
 $light_grey: #a6a6a6;
-/*
+
 .modal-window { //locked background
     display: flex; //none;// 
     width: 100%;
@@ -14,7 +14,7 @@ $light_grey: #a6a6a6;
     position: fixed;
     padding: 15px;
     overflow: auto;
-  }*/
+  }
 
 .modal__dialog {
     width: 100%;
@@ -23,23 +23,9 @@ $light_grey: #a6a6a6;
     background-color: $white;
     position: relative;
 
-    .modal__close {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        background: none;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        transition:  box-shadow .2s linear;
-
-        &:hover {
-            box-shadow: 0 0 25px rgba($color: $black, $alpha: .25);
-        }
-    }
-
         .contact {
             display: flex;
+            margin-bottom: 30px;
 
             .contact__right {
                 width: 55%;

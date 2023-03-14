@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="nav_bar" class="footer">
     <div class="container">
 
         <div class="footer__inner">
@@ -8,25 +8,25 @@
                     &copy; 2018 UI43 - Free Templates   |</div> 
 
                 <div class="footer__social">
-                    <a class="footer__social-icon" href="#" target="_blank">
-                        <img src="assets/linkdin_grey.png" alt="linkdin" width="18px">
+                    <a class="footer__social-icon" [href]="user.linkdin_url" target="_blank">
+                        <img [src]="user.linkdin_icon_grey" alt="linkdin" width="18px">
                      </a>
-                     <a class="footer__social-icon" href="https://www.instagram.com/tyt.ua/" target="_blank">
-                        <img src="assets/instagram_grey.png" alt="instagram" width="19px">
+                     <a class="footer__social-icon" [href]="user.instagram_url" target="_blank">
+                        <img [src]="user.instagram_icon_grey" alt="instagram" width="19px">
                     </a> 
-                    <a class="footer__social-icon" href="#" target="_blank">
-                        <img src="assets/facebook_grey.png" alt="facebook" width="18px">
+                    <a class="footer__social-icon" [href]="user.facebook_url" target="_blank">
+                        <img [src]="user.facebook_icon_grey" alt="facebook" width="18px">
                     </a>                                                      
                 </div>
 
             </div>
 
             <nav class="footer__nav">
-                <a class="footer__nav-link" href="#">Work</a>
-                <a class="footer__nav-link" href="#">About me</a>
-                <a class="footer__nav-link" href="#">Blog</a>
-                <a class="footer__nav-link" href="#">Contact</a>
-                <a class="footer__nav-link HIRE" href="#">Hire me</a>
+                <a class="footer__nav-link" (click)="toWork()" [routerLink]=user.nav_work routerLinkActive="active">Work</a>
+                <a class="footer__nav-link" (click)="toAbout()" [routerLink]=user.nav_about_me routerLinkActive="active">About me</a>
+                <a class="footer__nav-link" (click)="toBlog()" [routerLink]=user.nav_blog routerLinkActive="active">Blog</a>
+                <a class="footer__nav-link" (click)="toContact()" [routerLink]=user.nav_contact routerLinkActive="active">Contact</a>
+                <a class="footer__nav-link HIRE" (click)="openContact(true)">Hire me</a>
             </nav>
 
         </div>

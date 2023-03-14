@@ -18,10 +18,12 @@
                     </a>
                 </div>
 
-                <a class="intro__link HIRE" [href]=user.nav_hire_me>HIRE ME</a>
-                <a class="btn" [href]=user.nav_resume>SEE MY RESUME</a>
+                <a class="intro__link HIRE" (click)="openContact(true)">HIRE ME</a>
+                <a class="btn" (click)="openResume(true)">SEE MY RESUME</a>
             </div> 
-            <img class="intro__photo" [src]=user.intro_photo alt="my_photo">
+            <div class="intro__photo">
+                <img class="img" [src]=user.intro_photo alt="my_photo">
+            </div>
         </div>
     </div>
 </section>

@@ -12,12 +12,13 @@ export class BlogComponent {
 
   @Output() sendBlogId = new EventEmitter()
 
-  openArticle(openModal) {
+  openBlog(openModal) {
     if (openModal === true) {
-      let modal_article = document.querySelector('.modal') as HTMLElement
-      modal_article.setAttribute('style', 'display : flex')
+      let modal_window = document.getElementById('modal-blog')?.classList
+      let active_class = 'opened'
+      modal_window?.add(active_class)
     }
+    openModal = false;
     this.sendBlogId.emit(this.blog.id);
-    //console.log(this.blog);
     }
 }
